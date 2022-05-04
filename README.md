@@ -1,3 +1,3 @@
-Binary Search
-Quick Sort
-Merge Sort
+#Binary Search
+#Quick Sort
+#Merge Sort
