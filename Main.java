@@ -112,25 +112,47 @@ public class Main {
 
 
     ///////////////////////////////////////////////////////////
-    /*private static int binarySearch(int[] array, int target){
-
-        int low = 0;
-        int high = array.length;
-
-        while(low <= high){
-
-            int middle = low+(high-low)/2;
-            int value = array[middle];
-
-            System.out.println("middle: " + value);
-
-            if(value < target)
-                low = middle++;
-            else if (value > target)
-                high = middle--;
-            else return middle;
+    public static void binary_search(int[] list,int first, int last, int item){
+        while(first<=last){
+            int mid = (last+first)/2;
+            int guess = list[mid];
+            if(item>guess){
+                first = mid+1;
+            }
+            else if(item == guess){
+                System.out.println("Твоя цифра находится на " + mid);
+                break;
+            }
+            else{
+                last = mid-1;
+            }
         }
-        return -1;
-    }*/
+        if(first>last){
+            System.out.println("Твоя цифра не найдена");
+        }
+    }
+    ///////////////////////////////////////////////////////////
+    
+    
+    
+    
+    
+    ///////////////////////////////////////////////////////////
+    public static int findSmallestElementInArray(int arr[]){
+        int smallest = arr[0];
+        int smallest_index = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if(arr[i] < smallest) {
+                smallest = arr[i];
+                smallest_index = i;
+            }
+        }
+        return smallest;
+    }
     ///////////////////////////////////////////////////////////
 }
+
+
+
+
+
